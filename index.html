@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neurogen Reflection</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    textarea {
+      flex: 1;
+      width: 100%;
+      padding: 1em;
+      box-sizing: border-box;
+      font-size: 1rem;
+      resize: none;
+      border: none;
+      outline: none;
+    }
+    #controls {
+      padding: 1em;
+      background: #f0f0f0;
+      text-align: right;
+    }
+    #send {
+      padding: .5em 1.2em;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #response {
+      padding: 1em;
+      border-top: 1px solid #ddd;
+      height: 20vh;
+      overflow-y: auto;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- Large scrollable text area -->
+  <textarea id="reflection" placeholder="Type your reflection here…"></textarea>
+ 
+  <!-- Send button -->
+  <div id="controls">
+    <button id="send">Send</button>
+  </div>
+ 
+  <!-- Placeholder for response -->
+  <div id="response">Your response will show up here.</div>
+ 
+  <script>
+    document.getElementById('send').addEventListener('click', () => {
+      const input = document.getElementById('reflection').value.trim();
+      if (!input) return alert('Please type something first!');
+      
+      // For now, just echo it back:
+      document.getElementById('response').textContent = input;
+      
+      // ↓ Later, swap this out for a fetch() to your GPT endpoint:
+      /*
+      fetch('https://your.api/reflect', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({text: input})
+      })
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('response').textContent = data.reply;
+      });
+      */
+    });
+  </script>
+ 
+</body>
+</html>
+ 
