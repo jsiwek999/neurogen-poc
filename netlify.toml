@@ -1,1 +1,3 @@
-[build] publish = "."
+[build]
+  publish = "."
+  functions = "functions"
