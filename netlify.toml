@@ -2,8 +2,8 @@
   # Where your static files live (your index.html, etc.)
   publish = "."
   # Where Netlify will look for your serverless functions
-  functions = "netlify/functions"
+  # functions = "netlify/functions"
 
 [dev]
   # Mirror the same functions folder when running locally with Netlify Dev
-  functions = "netlify/functions"
+  # functions = "netlify/functions"
