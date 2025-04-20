@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jsiwek999/neurogen-poc/issues"
   },
-  "homepage": "https://github.com/jsiwek999/neurogen-poc#readme"
+  "homepage": "https://github.com/jsiwek999/neurogen-poc#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
