@@ -19,5 +19,8 @@
   "homepage": "https://github.com/jsiwek999/neurogen-poc#readme",
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.25.0"
   }
 }
